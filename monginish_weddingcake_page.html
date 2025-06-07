@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cakesonline.monginis.net/favicon.ico">
+    <title>Monginis Wedding Cakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: #ffd5eb;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e6007e;
+        }
+
+        .search-box {
+            border: 1px solid #e6007e;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+
+        .nav-icon {
+            color: #e6007e;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+
+        .navbar-brand img {
+            height: 35px;
+        }
+
+        @media (max-width:1324px) {
+
+            .navbar-brand img {
+                height: 30px;
+            }
+        }
+
+        @media (max-width:992px) {
+
+            .navbar-brand img {
+                height: 30px;
+            }
+
+        }
+
+        @media (max-width:768px) {
+
+            .navbar-brand img {
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                height: 30px;
+            }
+
+            .navbar-toggler-icon {
+                width: 1.25em;
+                height: 1.25em;
+            }
+        }
+
+        @media (max-width:250px) {
+
+            .navbar-brand img {
+                height: 15px;
+                width: 60px;
+            }
+
+            .navbar-toggler-icon {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+
+        }
+
+        @media (max-width: 150px) {
+            .navbar-brand img {
+                height: 12px;
+                width: 55px;
+            }
+
+            .navbar-toggler-icon {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+        }
+
+        @media (max-width:120px) {
+
+            .navbar-brand img {
+                height: 15px;
+                width: 35px;
+            }
+
+            .navbar-toggler-icon {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
+        .third-section {
+            background-color: #fff5f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .third-section .section-title {
+            color: #e6007e;
+            font-weight: bold;
+        }
+
+        .third-section .icon-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .third-section .icon-box img {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcce0;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 15px;
+        }
+
+        .third-section .icon-box h5 {
+            font-weight: bold;
+        }
+
+        @media (max-width:300px) {
+            .third-section p {
+                font-size: 13px;
+            }
+
+            .third-section .icon-box img {
+                height: 70px;
+                width: 70px;
+            }
+
+            .third-section .icon-box h5 {
+                font-size: 1rem;
+            }
+        }
+
+        .fourth-section {
+            background-color: #fde7f2;
+            text-align: center;
+        }
+
+        .fourth-section .title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .fourth-section .title span {
+            color: #ff007f;
+        }
+
+        .fourth-section .card {
+            border: none;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .fourth-section .card img {
+            border-radius: 10px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .fourth-section .enquire-btn {
+            background-color: #ff007f;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .fourth-section .enquire-btn:hover {
+            background-color: #cc0066;
+        }
+
+        .fifth-section {
+            background-color: #fde7f2;
+            text-align: center;
+        }
+
+        .fifth-section .title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width:300px) {
+            .fifth-section .title {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+
+        .fifth-section .title span {
+            color: #ff007f;
+        }
+
+        .fifth-section .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .fifth-section .btn-order {
+            background-color: #ff007f;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .fifth-section .btn-order:hover {
+            background-color: #cc0066;
+        }
+
+        .sixth-section {
+            background-color: #fff9f7;
+        }
+
+        .sixth-section .faq-heading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e6007e;
+            margin-bottom: 20px;
+        }
+
+        .sixth-section .faq-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .sixth-section .faq-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #000;
+        }
+
+        .footer {
+            background-color: #2d0140;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e6007e;
+        }
+
+        .footer .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .footer .social-icons a:hover {
+            color: #e91e63;
+        }
+
+        .footer .contact-info {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="monginis_home_page.html">
+                <img src="https://www.monginis.net/wp-content/uploads/2022/06/cropped-NEW-LOGO.png" alt="Monginis-Logo"
+                    height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Partner With Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex search-box">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Search for cakes, pastries, savories, etc." aria-label="Search">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="d-flex align-items-center ms-3">
+                    <i class="fas fa-birthday-cake nav-icon"></i>
+                    <span>Ahmedabad, Gujarat, India</span>
+                </div>
+                <div class="ms-3">
+                    <i class="fas fa-shopping-cart nav-icon"></i>
+                </div>
+                <div class="ms-3">
+                    <button class="btn btn-dark rounded-circle text-white">M</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0 mt-5 mt-md-5">
+        <img src="https://cakesonline.monginis.net/_next/image?url=%2Fassets%2Fimages%2Flanding-page%2FtopImage.png&w=1920&q=75"
+            alt="Wedding Cakes Banner" class="banner img-fluid">
+    </div>
+
+    <div class="third-section">
+        <div class="container text-center p-5 p-md-5">
+            <h2 class="section-title">Why Choose Us ?</h2>
+            <p class="fs-5">You Dream it, We bake it</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="icon-box">
+                        <img src="https://cakesonline.monginis.net/_next/image?url=%2Fassets%2Fimages%2Flanding-page%2Fcake.png&w=256&q=75"
+                            alt="Icon">
+                        <div>
+                            <h5>Fully Personalized Designs:</h5>
+                            <p>Choose from a variety of designs, sizes, and flavors, all customized to fit your style.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <img src="https://cakesonline.monginis.net/_next/image?url=%2Fassets%2Fimages%2Flanding-page%2Fcake.png&w=256&q=75"
+                            alt="Icon">
+                        <div>
+                            <h5>Fresh & Flavorful:</h5>
+                            <p>No preservatives, only the freshest ingredients for a delectable experience.</p>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <img src="https://cakesonline.monginis.net/_next/image?url=%2Fassets%2Fimages%2Flanding-page%2Fcake.png&w=256&q=75"
+                            alt="Icon">
+                        <div>
+                            <h5>On-Time Delivery:</h5>
+                            <p>We deliver directly to your venue at the perfect moment, hassle-free.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="icon-box">
+                        <img src="https://cakesonline.monginis.net/_next/image?url=%2Fassets%2Fimages%2Flanding-page%2Fcake.png&w=256&q=75"
+                            alt="Icon">
+                        <div>
+                            <h5>Finest Quality, Rich Taste:</h5>
+                            <p>We only use the finest ingredients to ensure your cake is as delicious as it is stunning.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <img src="https://cakesonline.monginis.net/_next/image?url=%2Fassets%2Fimages%2Flanding-page%2Fcake.png&w=256&q=75"
+                            alt="Icon">
+                        <div>
+                            <h5>Crafted by Experts:</h5>
+                            <p>Decades of cake artistry ensure your wedding cake is a masterpiece.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth-section mt-5 mt-md-5">
+        <div class="container py-5">
+            <h2 class="title">Celebrate with a <span>Cake</span> as <span>Unique as Your Love</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Asymetrical%20Motion%20Cake.png"
+                            alt="Asymmetrical Motion Cake">
+                        <h5 class="mt-3">Asymmetrical Motion Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Bride%20&%20Groom%20Cake.png"
+                            alt="Bride & Groom Cake">
+                        <h5 class="mt-3">Bride & Groom Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Dholki%20Cake.png"
+                            alt="Dholki Cake">
+                        <h5 class="mt-3">Dholki Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Geometry%20Wedding%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Geometry Wedding Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Golden%20Bow%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Golden Bow Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Golden%20Wedding%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Golden Wedding Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Grand%20Textures%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Grand Textures Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Haldi%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Grand Textures Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Layered%20Ball%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Layered Ball Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Marble%20Wedding%20Beauty%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Marble Wedding Beauty Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Mehendi%20Tower%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Mehendi Tower Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://cakesonline.monginis.net/assets/images/landing-page/cake/Oregami%20Motion%20Cake.png"
+                            alt="Geometry Wedding Cake">
+                        <h5 class="mt-3">Oregami Motion Cake</h5>
+                        <button class="enquire-btn">ENQUIRE NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fifth-section">
+        <div class="container py-5">
+            <h2 class="title">Plan Your <span>Dream</span> Wedding Cake!</h2>
+            <div class="form-container">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Phone</label>
+                            <input type="text" class="form-control" placeholder="Enter your Phone">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your Email">
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Event Date</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">City</label>
+                            <select class="form-select">
+                                <option selected>Select a City</option>
+                                <option value="1">New York</option>
+                                <option value="2">Los Angeles</option>
+                                <option value="3">Chicago</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <label class="form-label">Additional Notes</label>
+                        <textarea class="form-control" rows="4"
+                            placeholder="Write any additional notes here..."></textarea>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <button type="submit" class="btn btn-order">ORDER NOW</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="sixth-section">
+        <div class="container mt-5">
+            <h2 class="faq-heading">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <p><strong>1. Can I customize my wedding cake design?</strong><br>
+                        Yes, you can send the image of the cake for customization.</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>2. Do you offer eggless?</strong><br>
+                        At Monginis all cakes are 100% Veg.</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>3. What are the delivery charges?</strong><br>
+                        The delivery charges depend on your selected area. T&C*</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>4. Do you use any preservatives in cakes?</strong><br>
+                        No, at Monginis all cakes are 100% preservative free.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="monginis_home_page.html"> <img src="https://www.monginis.net/wp-content/uploads/2022/06/cropped-NEW-LOGO.png"
+                        alt="Monginis Logo" class="img-fluid"></a>
+                    </div>
+                    <p>Magic every time</p>
+                </div>
+                <div class="col-md-2 text-center text-md-center">
+                    <h6>Quick Links</h6>
+                    <p><a href="monginis_aboutus_page.html">About Us</a></p>
+                    <p><a href="#">Menu</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Connect With Us</h6>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6>Contact Us</h6>
+                    <p>&#9742; 9727747577</p>
+                    <p>&#9993; <a href="mailto:sfoods.ecomm@gmail.com">sfoods.ecomm@gmail.com</a></p>
+                </div>
+            </div>
+            <p class="mt-3">Monginis © 2024. All Rights Reserved. Manufacturing Franchisee - Siddharth Foods</p>
+            <p>
+                <a href="#">Contact Us</a> |
+                <a href="#">Privacy</a> |
+                <a href="#">Terms Of Use</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
